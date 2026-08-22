@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str[] = "Hello World";
+    char *ptr;
+
+    ptr = strchr(str, 'W');
+
+    if (ptr != NULL)
+        printf("Character found: %s\n", ptr);
+    else
+        printf("Character not found\n");
+
+    return 0;
+}
