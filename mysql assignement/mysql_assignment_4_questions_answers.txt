@@ -1,0 +1,118 @@
+MySQL Assignment 4 – Questions and Answers
+
+1. Question: Display FIRST_NAME as NAME and SALARY as MONTHLY_SALARY.
+Answer:
+SELECT FIRST_NAME AS NAME, SALARY AS MONTHLY_SALARY
+FROM EMPLOYEES;
+
+2. Question: Display unique DEPARTMENT_ID values.
+Answer:
+SELECT DISTINCT DEPARTMENT_ID
+FROM EMPLOYEES;
+
+3. Question: Display all employees ordered by FIRST_NAME in ascending order.
+Answer:
+SELECT *
+FROM EMPLOYEES
+ORDER BY FIRST_NAME ASC;
+
+4. Question: Display FIRST_NAME, SALARY, and PF calculated as 15% of SALARY.
+Answer:
+SELECT FIRST_NAME, SALARY, SALARY * 0.15 AS PF
+FROM EMPLOYEES;
+
+5. Question: Find the total of all employees' salaries.
+Answer:
+SELECT SUM(SALARY) AS TOTAL_SALARY
+FROM EMPLOYEES;
+
+6. Question: Find the highest salary.
+Answer:
+SELECT MAX(SALARY) AS MAX_SALARY
+FROM EMPLOYEES;
+
+7. Question: Find the lowest salary.
+Answer:
+SELECT MIN(SALARY) AS MIN_SALARY
+FROM EMPLOYEES;
+
+8. Question: Find the average salary.
+Answer:
+SELECT AVG(SALARY) AS AVERAGE_SALARY
+FROM EMPLOYEES;
+
+9. Question: Count the total number of employees.
+Answer:
+SELECT COUNT(*) AS TOTAL_EMPLOYEES
+FROM EMPLOYEES;
+
+10. Question: Display the first 10 employees.
+Answer:
+SELECT *
+FROM EMPLOYEES
+LIMIT 10;
+
+11. Question: Display employees whose salary is greater than 5000.
+Answer:
+SELECT FIRST_NAME, SALARY
+FROM EMPLOYEES
+WHERE SALARY > 5000;
+
+12. Question: Display employees whose salary is between 3000 and 7000.
+Answer:
+SELECT FIRST_NAME, SALARY
+FROM EMPLOYEES
+WHERE SALARY BETWEEN 3000 AND 7000;
+
+13. Question: Display employees who belong to department 50.
+Answer:
+SELECT *
+FROM EMPLOYEES
+WHERE DEPARTMENT_ID = 50;
+
+14. Question: Display employees hired during the year 1987.
+Answer:
+SELECT *
+FROM EMPLOYEES
+WHERE HIRE_DATE BETWEEN '1987-01-01' AND '1987-12-31';
+
+15. Question: Display employees whose FIRST_NAME starts with 'A'.
+Answer:
+SELECT *
+FROM EMPLOYEES
+WHERE FIRST_NAME LIKE 'A%';
+
+16. Question: Display employees whose FIRST_NAME ends with 'a'.
+Answer:
+SELECT *
+FROM EMPLOYEES
+WHERE FIRST_NAME LIKE '%a';
+
+17. Question: Display employees whose FIRST_NAME contains 'an'.
+Answer:
+SELECT *
+FROM EMPLOYEES
+WHERE FIRST_NAME LIKE '%an%';
+
+18. Question: Display employees whose JOB_ID is IT_PROG or SH_CLERK.
+Answer:
+SELECT *
+FROM EMPLOYEES
+WHERE JOB_ID IN ('IT_PROG', 'SH_CLERK');
+
+19. Question: Display unique JOB_ID values.
+Answer:
+SELECT DISTINCT JOB_ID
+FROM EMPLOYEES;
+
+20. Question: Display employees whose LAST_NAME is BLAKE, SCOTT, KING, or FORD.
+Answer:
+SELECT *
+FROM EMPLOYEES
+WHERE LAST_NAME IN ('BLAKE', 'SCOTT', 'KING', 'FORD');
+
+21. Question: Display all employees ordered by salary in descending order.
+Answer:
+SELECT *
+FROM EMPLOYEES
+ORDER BY SALARY DESC;
